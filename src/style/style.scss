@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import "_common";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 20px;
+  max-height: 100vh;
+}
+
+.app-heading {
+  font-family: "Lora", "Franklin Gothic Medium", sans-serif !important;
+  font-size: 2.7rem;
+  text-align: center;
+  color: #2e2e2e;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.execution-section {
+  height: 80vh;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .code-editor-container {
+    width: 50%;
+
+    #editor {
+      flex: 1;
+      width: 98%;
+      height: 95%;
+      resize: none;
+      border: none;
+      border-radius: 10px;
+      padding-top: 10px;
+      padding-left: 10px;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  .output-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-left: 1px solid #ccc;
+
+    #success-output {
+      border-bottom: 1px solid #ccc;
+      margin: 0;
+      padding: 10px;
+      border: none;
+      overflow-y: auto;
+      font-family: "Roboto", "Franklin Gothic Medium", sans-serif !important;
+    }
+  }
+}
